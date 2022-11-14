@@ -1,24 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@700&display=swap');
 *{
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-font-family: 'Poppins', sans-serif;
+font-family: 'Quattrocento', serif;
 }
 
 body{
   width: 100%;
   min-height: 100vh;
-  background-color: black;
-  color: wheat;
+  background-color: rgb(0, 0, 0);
+  color: rgb(252, 252, 252);
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(./assets/img/backgroud-stars.jpg);
+  background-image: url(./assets/img/pexels-matt-hardy-3560136.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  font-size: 1.4rem;
+ 
 }
 
 i{
@@ -45,7 +47,6 @@ ul{
 .shape-1{
   width: 150px;
   height: 150px;
-  background: radial-gradient(circle at 200px 65px ,#9b22ea, #005);
   left: -150px;
   top: -100px;
   filter: blur(10px);
@@ -57,13 +58,12 @@ ul{
   right: -300px;
   bottom: -100px;
   filter: blur(10px);
-  opacity: 50%; 
-}   */
+  opacity: 50%;
+} */
 
 .shape-3{
   width: 60px;
   height: 60px;
-  background: #08e2ff;
   right: 7px;
   top: 10px;
   filter: blur(20px);

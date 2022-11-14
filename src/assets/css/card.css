@@ -1,7 +1,9 @@
 .card{
     width: 100%;
     overflow: hidden;
-    padding: 25px;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
 .card .nav{
     width: 100%;
@@ -33,6 +35,7 @@
 
 .card .details .title {
     font-size: 1.2rem;
+
 }
 
 .card .details .artist{
@@ -87,7 +90,8 @@
     height: 2.5rem;
     width: 2.5rem;
     border-radius: inherit;
-    background: linear-gradient(#8dadff, #6e72a3 100%);
+    opacity: 0.5;
+    background: linear-gradient(#b0b2b6, #6e72a3 100%);
 }
 
 .card .controls .play i{
