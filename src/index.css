@@ -1,13 +1,85 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  width: 100%;
+  min-height: 100vh;
+  background-color: black;
+  color: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./assets/img/backgroud-stars.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
+
+i{
+  cursor: pointer;
+  user-select: none;
+}
+ul{
+  list-style: none;
+}
+
+.container{
+
+  width: 360px;
+  border-radius: 15px;
+  position: relative;
+}
+.shape{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.shape-1{
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle at 200px 65px ,#9b22ea, #005);
+  left: -150px;
+  top: -100px;
+  filter: blur(10px);
+  opacity: 50%;
+}
+
+/* .shape-2{
+  background: radial-gradient(circle at 45px 90px ,#ea22b1, #111);
+  right: -300px;
+  bottom: -100px;
+  filter: blur(10px);
+  opacity: 50%;
+} */
+
+.shape-3{
+  width: 60px;
+  height: 60px;
+  background: #08e2ff;
+  right: 7px;
+  top: 10px;
+  filter: blur(20px);
+}
+
+
+
+
+main{
+  width: 360px;
+
+  border-radius: 15px;
+  border: 1px solid rgba(225,225,225, 0.1);
+  box-shadow: 0 0 20px rgba(7,15,15,0.5);
+  overflow: hidden;
+  position: relative;
+  backdrop-filter: blur(3px);
+}
+
