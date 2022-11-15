@@ -134,7 +134,8 @@ const Card = ({props :{musicNumber, setMusicNumber, setOpen}}) => {
         </div>
         <div className="img">
 
-            <img src={playlist[musicNumber].thumbnail} alt="" />
+            <img src={playlist[musicNumber].thumbnail} alt="" 
+                className={`${play ? 'playing': ''}`}/>
 
         </div>
 

@@ -25,6 +25,19 @@
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
+    animation: rotate 20s linear;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+
+.card .img img.playing{
+    animation-play-state: running;
+
+}
+@keyframes rotate {
+    from{ transform: rotate(0deg);}
+    to{ transform: rotate(360deg);}
+    
 }
 
 
