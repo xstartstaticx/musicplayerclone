@@ -45,36 +45,17 @@ ul{
 }
 
 .shape-1{
-  width: 150px;
+  width: 600px;
   height: 150px;
-  left: -150px;
-  top: -100px;
-  filter: blur(10px);
-  opacity: 50%;
+  background: radial-gradient(circle at 45px 90px ,#000000, #111);
+  left: 20px;
+  top: 370px;
+  filter: blur(5px);
+  opacity: 80%;
 }
-
-/* .shape-2{
-  background: radial-gradient(circle at 45px 90px ,#ea22b1, #111);
-  right: -300px;
-  bottom: -100px;
-  filter: blur(10px);
-  opacity: 50%;
-} */
-
-.shape-3{
-  width: 60px;
-  height: 60px;
-  right: 7px;
-  top: 10px;
-  filter: blur(20px);
-}
-
-
-
 
 main{
   width: 360px;
-
   border-radius: 15px;
   border: 1px solid rgba(225,225,225, 0.1);
   box-shadow: 0 0 20px rgba(7,15,15,0.5);

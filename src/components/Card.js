@@ -12,6 +12,7 @@ const Card = ({props :{musicNumber, setMusicNumber, setOpen}}) => {
     const [play,setPlay] = useState(false);
     const [showVolume,setShowVolume] = useState(false);
     const [volume, setVolume] = useState(50);
+    const [repeat, setRepeat] = useState('repeat');
 
 /* Refs */
 
@@ -68,6 +69,43 @@ const Card = ({props :{musicNumber, setMusicNumber, setOpen}}) => {
         })
     }
 
+    function handleRepeat(){
+        setRepeat(value => {
+            switch(value){
+                case 'repeat':
+                    return 'repeat_one';
+                case 'repeat_one':
+                    return 'shuffle'
+                default:
+                    return 'repeat'
+            }
+        })
+    }
+
+    function EndedAudio(){
+        switch(repeat){
+            case 'repeat_one':
+                return  audioRef.current.play();
+            case 'shuffle':
+                return handleShuffle();
+            default:
+                return handleNextPrev(1)
+        }
+    }
+
+
+    function handleShuffle(){
+        const num = randomNumber();
+        setMusicNumber(num)
+    }
+
+    function randomNumber (){
+        const number = Math.floor(Math.random()* (playlist.length -1));
+        if(number === musicNumber)
+        return randomNumber();
+        
+        return number;
+    }
 /* useEffects  */
 
     useEffect(() =>{
@@ -131,8 +169,8 @@ const Card = ({props :{musicNumber, setMusicNumber, setOpen}}) => {
 
         <div className="controls">
             
-            <i className="material-icons"
-            >repeat</i>
+            <i className="material-icons" onClick={handleRepeat}
+            >{repeat}</i>
                 
             <i className="material-icons"id="prev"
                 onClick={() => handleNextPrev(-1)}  
@@ -173,7 +211,8 @@ const Card = ({props :{musicNumber, setMusicNumber, setOpen}}) => {
                         min={0} 
                         max={100} 
                         value={volume}
-                        onChange={e => setVolume(e.target.value)}/>
+                        onChange={e => setVolume(e.target.value)}
+                        className="volume-range"/>
 
                         <span>{volume}</span>
                 </div>
@@ -184,7 +223,8 @@ const Card = ({props :{musicNumber, setMusicNumber, setOpen}}) => {
             src={playlist[musicNumber].src}  
             ref={audioRef}
             onLoadStart={handleLoadStart} 
-            onTimeUpdate={handleTimeUpdate} />
+            onTimeUpdate={handleTimeUpdate} 
+            onEnded={EndedAudio}/>
 
         </div>
     </div>
