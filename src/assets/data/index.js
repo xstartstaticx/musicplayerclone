@@ -12,7 +12,7 @@ const playlist = [
     {
         id : 2,
         title : 'Mortimer',
-        artist : 'Brad Majors feat. Daniel Reiller',
+        artist : 'Brad Majors feat. D. Reiller',
         thumbnail: require('../img/Mortimer-cover-image.webp'),
         src: require('../mp3/Mortimer (feat. Daniel Reiller).mp3'),
 
@@ -80,7 +80,7 @@ const playlist = [
         title : 'I luv U',
         artist : 'Dizzee Rascal',
         thumbnail: require('../img/dizzee.jpg'),
-        src: require('../mp3/I Luv U (Original Version).mp3'),
+        src: require('../mp3/Bittersweet.mp3'),
 
     },
 ]
