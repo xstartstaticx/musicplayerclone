@@ -13,6 +13,10 @@
     "postcss": "8.4.35",
     "nth-check": "2.0.1"
   },
+  "devDependencies": {
+    "postcss": "8.4.35",
+    "nth-check": "2.0.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
